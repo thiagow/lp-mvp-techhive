@@ -1,0 +1,89 @@
+'use client';
+
+import React from 'react';
+import { handleCtaRedirect } from '@/utils/navigation';
+
+export default function ValueProposition() {
+  const benefits = [
+    "Clareza de escopo técnica e comercial em minutos.",
+    "Sem ligações insistentes ou reuniões improdutivas.",
+    "Orçamento transparente com cronograma de 10 dias garantido.",
+    "Feedback imediato da nossa equipe de engenharia sênior."
+  ];
+
+  return (
+    <section id="proposta-secao" className="relative overflow-hidden bg-navy-dark py-20 md:py-28">
+      {/* Círculos de gradiente neon sutil ao fundo */}
+      <div className="absolute -top-40 -left-40 h-[400px] w-[400px] rounded-full bg-brand-blue/20 blur-3xl" />
+      <div className="absolute -bottom-40 -right-40 h-[400px] w-[400px] rounded-full bg-brand-blue/10 blur-3xl" />
+
+      {/* Grid de fundo sutil */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-40" />
+
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          
+          {/* Card Principal com Efeito Glassmorphism */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 shadow-2xl backdrop-blur-md">
+            
+            {/* Tag / Destaque */}
+            <div className="inline-flex items-center rounded-full bg-brand-blue/20 border border-brand-blue/30 px-3 py-1 text-xs font-semibold tracking-wider text-blue-400 uppercase mb-6">
+              Acesso Imediato
+            </div>
+
+            {/* Título do Card */}
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Inicie o seu MVP agora.<br/>
+              <span className="text-slate-300 font-medium text-2xl sm:text-3xl">Sem formulário chato, sem compromisso.</span>
+            </h2>
+
+            {/* Texto de Apoio */}
+            <p className="mx-auto mt-6 max-w-2xl text-base text-slate-300 leading-relaxed font-normal">
+              Nosso assistente de proposta dinâmica vai te fazer algumas perguntas rápidas para entender o que você precisa. Em poucos minutos, você terá clareza do caminho — e nossa equipe prepara um escopo sob medida.
+            </p>
+
+            {/* Lista de Benefícios com ícone de check */}
+            <div className="mx-auto mt-8 max-w-lg text-left">
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start text-sm text-slate-200">
+                    <svg className="h-5 w-5 text-brand-blue shrink-0 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-medium">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Botão de Ação Principal */}
+            <div className="mt-10">
+              <button
+                onClick={() => handleCtaRedirect('value_prop_cta')}
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-brand-blue px-8 py-4 text-base font-bold text-white shadow-lg shadow-brand-blue/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-blue-hover focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 cursor-pointer"
+              >
+                CONVERSAR E DESCREVER MINHA IDEIA
+                <svg 
+                  className="ml-2 -mr-1 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor" 
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </button>
+              
+              {/* Nota sobre o tempo de preenchimento */}
+              <p className="mt-4 text-xs text-slate-400 font-normal">
+                Tempo estimado: 3 minutos. Não requer conhecimentos técnicos.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

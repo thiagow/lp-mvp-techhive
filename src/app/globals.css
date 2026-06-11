@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-base: #0B0F19;
+  --color-navy-light: #1E293B;
+  --color-navy-dark: #05070B;
+  --color-brand-blue: #2563EB;
+  --color-brand-blue-hover: #1D4ED8;
+  --color-neutral-light: #F8FAFC;
+  --color-neutral-dark: #020408;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1B2A4A;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
