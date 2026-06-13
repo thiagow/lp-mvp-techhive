@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-base: #0B0F19;
+  --color-navy-base: #02040A;
+  --color-navy-deep: #0B0F19;
   --color-navy-light: #1E293B;
   --color-navy-dark: #05070B;
   --color-brand-blue: #2563EB;
   --color-brand-blue-hover: #1D4ED8;
+  --color-brand-cyan: #06B6D4;
+  --color-brand-cyan-hover: #0891B2;
+  --color-brand-violet: #8B5CF6;
   --color-neutral-light: #F8FAFC;
   --color-neutral-dark: #020408;
   
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #1B2A4A;
+  --foreground: #0F172A;
 }
 
 body {
@@ -26,3 +30,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Utilitários extras para o redesign */
+.text-balance {
+  text-wrap: balance;
+}
+

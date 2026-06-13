@@ -26,7 +26,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={() => handleCtaRedirect('navbar_cta')}
-              className="inline-flex items-center justify-center rounded-lg bg-brand-blue px-4 py-2 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-brand-blue-hover focus:outline-none focus:ring-2 focus:ring-brand-blue cursor-pointer"
+              className="inline-flex items-center justify-center rounded-lg bg-brand-blue px-5 py-2.5 text-xs font-bold tracking-wider text-white shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 hover:bg-brand-blue-hover hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] focus:outline-none focus:ring-2 focus:ring-brand-blue cursor-pointer"
             >
               FALAR COM ENGENHEIRO
             </button>
