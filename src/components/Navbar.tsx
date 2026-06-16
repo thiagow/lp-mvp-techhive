@@ -36,7 +36,8 @@ export default function Navbar() {
               onClick={() => handleCtaRedirect('navbar_cta')}
               className="btn-nav"
             >
-              FALAR COM UM ANALISTA
+              <span className="hidden sm:inline">FALAR COM UM ANALISTA</span>
+              <span className="sm:hidden">FALAR AGORA</span>
             </button>
           </div>
         </div>

@@ -204,12 +204,8 @@ export default function StudioMethod() {
 
         {/* Grid 3×2 */}
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
-          }}
-          className="sm:grid-cols-2 lg:grid-cols-3"
+          style={{ gap: '16px' }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           {steps.map((step) => (
             <div
@@ -357,16 +353,6 @@ export default function StudioMethod() {
         </div>
 
       </div>
-
-      {/* Responsivo mobile */}
-      <style>{`
-        @media (max-width: 1023px) {
-          .studio-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 639px) {
-          .studio-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }
