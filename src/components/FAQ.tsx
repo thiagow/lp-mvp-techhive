@@ -51,9 +51,7 @@ export default function FAQ() {
               <span className="faq-item__icon" aria-hidden="true">+</span>
             </summary>
             <p className="faq-item__answer">
-              24 anos em sistemas críticos para PMEs brasileiras nos colocou em projetos de varejo,
-              saúde, serviços financeiros, logística e agronegócio. Pergunte ao analista sobre o
-              seu setor específico na conversa inicial.
+              Com mais de 24 anos de bagagem em engenharia de software, projetamos sistemas de alta criticidade para grandes bancos, esferas governamentais e pequenas e médias empresas. Nossa experiência cobre varejo, saúde, logística, finanças e agronegócio. Fale com nosso analista sobre o seu setor na conversa inicial.
             </p>
           </details>
 
