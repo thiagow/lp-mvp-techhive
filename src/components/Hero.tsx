@@ -4,113 +4,250 @@ import React from 'react';
 import { handleCtaRedirect } from '@/utils/navigation';
 
 export default function Hero() {
-  const points = [
-    {
-      title: "Reuniões sem fim, orçamento travado",
-      description: "A agência pediu mais uma reunião. De novo. O orçamento que você precisa para começar a rodar nada de chegar.",
-      icon: (
-        <svg className="h-5 w-5 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      iconBg: "bg-blue-50"
-    },
-    {
-      title: "Desenvolvedores que desaparecem",
-      description: "O freelancer sumiu no meio do projeto e você se encontra travado: sem código, sem respostas e sem o dinheiro investido.",
-      icon: (
-        <svg className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-        </svg>
-      ),
-      iconBg: "bg-red-50"
-    },
-    {
-      title: "Time interno sobrecarregado",
-      description: "Seu time de tecnologia está focado em manter a operação rodando, e sua ideia de inovação entrou no fim da fila do depois.",
-      icon: (
-        <svg className="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-      ),
-      iconBg: "bg-amber-50"
-    }
-  ];
-
   return (
-    <section className="relative overflow-hidden bg-navy-base pt-20 pb-16 md:pt-24 md:pb-28">
-      {/* Background image of neural network */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-30 pointer-events-none" 
-        style={{ backgroundImage: "url('/images/hero_background.png')" }}
+    <section
+      className="hero relative overflow-hidden"
+      style={{
+        backgroundColor: '#0B0F19',
+        minHeight: '100dvh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        paddingTop: '64px', /* Altura do Navbar */
+      }}
+    >
+      {/* Background image — background-header.jpg */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/background-header.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.72,
+        }}
       />
-      {/* Radial overlay for gradient fade */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,transparent_20%,#02040A_95%)]" />
-      
-      {/* Glowing subtle lights */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -z-10 h-72 w-72 rounded-full bg-brand-blue/15 blur-[100px]" />
-      <div className="absolute top-10 left-1/4 -z-10 h-60 w-60 rounded-full bg-brand-cyan/10 blur-[80px]" />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Overlay escuro para legibilidade */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(11,15,25,0.55) 0%, rgba(11,15,25,0.18) 40%, rgba(11,15,25,0.45) 100%)',
+        }}
+      />
+
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="max-w-3xl mx-auto text-center">
+
           {/* Badge */}
-          <div className="inline-flex items-center rounded-full border border-brand-cyan/20 bg-brand-cyan/5 backdrop-blur-md px-3.5 py-1 text-[11px] font-bold tracking-widest text-brand-cyan uppercase mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-            <span className="mr-1.5 flex h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
-            VIBE CODING DIGITAL • TECH HIVE
+          <div
+            className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-[11px] font-semibold tracking-[0.2em] uppercase"
+            style={{
+              borderRadius: '999px',
+              border: '1px solid rgba(0,160,255,0.35)',
+              backgroundColor: 'rgba(0,160,255,0.08)',
+              color: 'rgba(0,200,255,0.90)',
+              backdropFilter: 'blur(6px)',
+            }}
+          >
+            <span
+              style={{
+                width: 6,
+                height: 6,
+                borderRadius: '50%',
+                backgroundColor: '#00A0FF',
+                display: 'inline-block',
+                boxShadow: '0 0 6px #00A0FF',
+              }}
+            />
+            VIBE CODING STUDIO | TECH HIVE
+            <span
+              style={{
+                width: 6,
+                height: 6,
+                borderRadius: '50%',
+                backgroundColor: '#00A0FF',
+                display: 'inline-block',
+                boxShadow: '0 0 6px #00A0FF',
+              }}
+            />
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl leading-tight max-w-3xl mx-auto text-balance">
-            Sua ideia vira um produto digital funcional em até{' '}
-            <span className="bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-violet bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(6,182,212,0.3)]">
-              10 dias úteis.
+          <h1
+            className="font-extrabold tracking-tight text-white text-balance"
+            style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: 1.18, marginBottom: '1.25rem' }}
+          >
+            Sua{' '}
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #2563EB 0%, #00A0FF 55%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              ideia
+            </span>{' '}
+            vira um produto digital em até{' '}
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #2563EB 0%, #00A0FF 55%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              10 dias úteis
             </span>
+            .
           </h1>
 
           {/* Subheadline */}
-          <p className="mt-6 text-base md:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
-            Enquanto a agência tradicional ainda está montando o orçamento, a gente entrega o seu MVP no ar. Desenvolvimento acelerado por IA, com arquitetura de quem constrói sistemas há 24 anos.
+          <p
+            className="font-normal leading-relaxed"
+            style={{
+              fontSize: '1.05rem',
+              color: 'rgba(220,230,255,0.85)',
+              maxWidth: '560px',
+              margin: '0 auto 2rem',
+            }}
+          >
+            Receba uma proposta detalhada em até 24 horas, sem reuniões intermináveis.
           </p>
 
           {/* CTA Button */}
-          <div className="mt-8 flex justify-center">
+          <div className="flex justify-center mb-10">
             <button
               onClick={() => handleCtaRedirect('hero_primary_cta')}
-              className="group relative w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-brand-blue px-8 py-4 text-base font-bold text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(6,182,212,0.6)] hover:bg-brand-blue-hover focus:outline-none focus:ring-2 focus:ring-brand-cyan cursor-pointer"
+              className="group inline-flex items-center justify-center gap-2 cursor-pointer"
+              style={{
+                backgroundColor: '#00A0FF',
+                color: '#FFFFFF',
+                padding: '14px 32px',
+                borderRadius: '8px',
+                fontWeight: 700,
+                fontSize: '15px',
+                letterSpacing: '0.3px',
+                border: 'none',
+                transition: 'background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={(e) => {
+                const btn = e.currentTarget as HTMLButtonElement;
+                btn.style.backgroundColor = '#0087D4';
+                btn.style.transform = 'translateY(-2px)';
+                btn.style.boxShadow = '0 8px 24px rgba(0,160,255,0.4)';
+              }}
+              onMouseLeave={(e) => {
+                const btn = e.currentTarget as HTMLButtonElement;
+                btn.style.backgroundColor = '#00A0FF';
+                btn.style.transform = 'translateY(0)';
+                btn.style.boxShadow = 'none';
+              }}
             >
-              QUERO TIRAR MINHA IDEIA DO PAPEL
-              <svg 
-                className="ml-2 -mr-1 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
+              Quero Receber Proposta em 24h
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
                 strokeWidth={2.5}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="transition-transform duration-200 group-hover:translate-x-1"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </button>
           </div>
-        </div>
 
-        {/* 3 Floating Cards (PainPoints / Dores) */}
-        <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto relative z-20">
-          {points.map((point, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-start rounded-2xl border border-slate-100 bg-white p-6 md:p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-            >
-              {/* Icon Container with soft background */}
-              <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${point.iconBg} mb-5`}>
-                {point.icon}
+          {/* Trust Items — 3 colunas com ícones */}
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12"
+            style={{ color: 'rgba(190,210,240,0.80)', fontSize: '0.82rem' }}
+          >
+            {/* Item 1 — 24 anos */}
+            <div className="flex items-center gap-3 text-left">
+              <div
+                style={{
+                  width: 42,
+                  height: 42,
+                  borderRadius: '50%',
+                  border: '1.5px solid rgba(0,160,255,0.4)',
+                  backgroundColor: 'rgba(0,160,255,0.10)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A0FF" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
               </div>
-              <h3 className="text-base md:text-lg font-bold text-slate-900 mb-2 leading-tight">
-                {point.title}
-              </h3>
-              <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                {point.description}
-              </p>
+              <div>
+                <div style={{ fontWeight: 700, color: 'rgba(220,235,255,0.95)', lineHeight: 1.35 }}>24 anos entregando</div>
+                <div style={{ lineHeight: 1.35 }}>sistemas críticos</div>
+              </div>
             </div>
-          ))}
+
+            {/* Item 2 — Arquitetura */}
+            <div className="flex items-center gap-3 text-left">
+              <div
+                style={{
+                  width: 42,
+                  height: 42,
+                  borderRadius: '50%',
+                  border: '1.5px solid rgba(0,160,255,0.4)',
+                  backgroundColor: 'rgba(0,160,255,0.10)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A0FF" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M3 9h18M9 21V9" />
+                </svg>
+              </div>
+              <div>
+                <div style={{ fontWeight: 700, color: 'rgba(220,235,255,0.95)', lineHeight: 1.35 }}>Arquitetura sênior</div>
+                <div style={{ lineHeight: 1.35 }}>em cada projeto</div>
+              </div>
+            </div>
+
+            {/* Item 3 — Código */}
+            <div className="flex items-center gap-3 text-left">
+              <div
+                style={{
+                  width: 42,
+                  height: 42,
+                  borderRadius: '50%',
+                  border: '1.5px solid rgba(0,160,255,0.4)',
+                  backgroundColor: 'rgba(0,160,255,0.10)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A0FF" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div>
+                <div style={{ fontWeight: 700, color: 'rgba(220,235,255,0.95)', lineHeight: 1.35 }}>Código 100% seu</div>
+                <div style={{ lineHeight: 1.35 }}>na entrega</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

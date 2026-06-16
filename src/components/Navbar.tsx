@@ -6,7 +6,15 @@ import { handleCtaRedirect } from '@/utils/navigation';
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-navy-base/90 backdrop-blur-md">
+    <header
+      className="absolute top-0 left-0 z-50 w-full"
+      style={{
+        backgroundColor: 'rgba(11, 15, 25, 0.95)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        borderBottom: '1px solid rgba(255,255,255,0.07)',
+      }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -26,9 +34,9 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={() => handleCtaRedirect('navbar_cta')}
-              className="inline-flex items-center justify-center rounded-lg bg-brand-blue px-5 py-2.5 text-xs font-bold tracking-wider text-white shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 hover:bg-brand-blue-hover hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] focus:outline-none focus:ring-2 focus:ring-brand-blue cursor-pointer"
+              className="btn-nav"
             >
-              FALAR COM ENGENHEIRO
+              FALAR COM UM ANALISTA
             </button>
           </div>
         </div>

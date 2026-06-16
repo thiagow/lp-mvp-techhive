@@ -58,7 +58,7 @@ export default function Footer() {
             &copy; {currentYear} Tech Hive. Todos os direitos reservados.
           </p>
           <p>
-            Tech Hive Tecnologia S/A • CNPJ: 00.000.000/0001-00 • Sistemas Críticos e IA
+            Tech Hive Tecnologia S/A • CNPJ: 00.000.000/0001-00 {/* TODO: inserir CNPJ real */} • Sistemas Críticos e IA
           </p>
         </div>
 

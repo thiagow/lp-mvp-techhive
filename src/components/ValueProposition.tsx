@@ -77,9 +77,9 @@ export default function ValueProposition() {
               <div className="mt-10">
                 <button
                   onClick={() => handleCtaRedirect('value_prop_cta')}
-                  className="group relative w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-brand-blue px-8 py-4 text-base font-bold text-white shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-blue-hover hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:ring-offset-2 focus:ring-offset-navy-dark cursor-pointer"
+                  className="btn-primary group relative w-full sm:w-auto inline-flex items-center justify-center cursor-pointer"
                 >
-                  CONVERSAR E DESCREVER MINHA IDEIA
+                  FALAR COM UM ANALISTA AGORA
                   <svg 
                     className="ml-2 -mr-1 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" 
                     fill="none" 
