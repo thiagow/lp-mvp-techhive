@@ -37,6 +37,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '885762810795367');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', { content_name: 'Landing Page Principal' });
             `,
           }}
         />
