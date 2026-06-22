@@ -14,10 +14,10 @@ export function handleCtaRedirect(ctaIdentifier: string): void {
   // --- PLACEHOLDER DE TRACKING (GTM / Meta Pixel) ---
   console.log(`[Tracking] CTA clicado: ${ctaIdentifier}`);
   
-  // Exemplo de integração Meta Pixel (Facebook Pixel):
-  // if (typeof window !== "undefined" && (window as any).fbq) {
-  //   (window as any).fbq('track', 'Lead', { cta: ctaIdentifier });
-  // }
+  // Integração Meta Pixel (Facebook Pixel):
+  if (typeof window !== "undefined" && (window as any).fbq) {
+    (window as any).fbq('track', 'Lead', { cta: ctaIdentifier });
+  }
 
   // Exemplo de integração Google Tag Manager (GTM):
   // if (typeof window !== "undefined" && (window as any).dataLayer) {
